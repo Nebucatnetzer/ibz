@@ -1,0 +1,41 @@
+<<<<<<< HEAD
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SEP Prüfung", "SEP Prüfung\SEP Prüfung.ssmssqlproj", "{5E08CD23-A66E-41A8-8B64-1258B2FCF100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E08CD23-A66E-41A8-8B64-1258B2FCF100}.Default|Default.ActiveCfg = Default
+		{F4D0BFC7-DA70-4D8E-BE36-1086597F63D3}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 13.00
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SEP Prüfung", "SEP Prüfung\SEP Prüfung.ssmssqlproj", "{5E08CD23-A66E-41A8-8B64-1258B2FCF100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E08CD23-A66E-41A8-8B64-1258B2FCF100}.Default|Default.ActiveCfg = Default
+		{F4D0BFC7-DA70-4D8E-BE36-1086597F63D3}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+>>>>>>> 91c37e0a13ad9148d1d6356ee6197441ad0a42e5

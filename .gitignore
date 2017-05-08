@@ -10,6 +10,7 @@ Session.vim
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 [Bb]in/
 [Oo]bj/
+*.exe
 
 # mstest test results
 TestResults

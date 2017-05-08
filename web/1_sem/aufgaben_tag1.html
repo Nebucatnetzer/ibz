@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+     <meta charset="utf-8">
+     <link rel="stylesheet" href="css/style.css">
+     <title>Aufgaben Tag 1</title>
+  </head>
+  <body>
+    <h1>Aufgaben Tag 1</h1>
+    <p>Dies sind die Hausaufgaben des ersten Tages Webtechnologie.</p>
+
+    <h3>IPv6</h3>
+    <p><b>Wieviele Adressen kann jede Person auf der Welt haben?</b></p>
+      <ul>
+        <li>4.85x10^28</li>
+      </ul>
+
+    <p><b>Welches sind die Nachteile gegenüber IPv4</b></p>
+      <ul>
+        <li>Vorteile
+          <ul>
+            <li>Entlastet Router</li>
+            <li>Mehr mögliche Adressen</li>
+            <li>Besser geeignet für mobile Geräte</li>
+          </ul></li>
+        <li>Nachteile
+          <ul>
+            <li>könnte Überwachung vereinfachen</li>
+            <li>Nicht rückwarts kompatibel (Hardware muss es
+              unterstützen.</li>
+            <li>komplizierte Adressnotation</li>
+          </ul></li>
+      </ul>
+
+    <p><b>Welche Betriebssysteme unterstützen IPv6?</b><p>
+      <ul>
+        <li>Linux >= 2.6</li>
+        <li>BSD</li>
+        <li>Windows >= 6.X</li>
+        <li>OSX >= 10.7</li>
+        <li>iOS >= 4.1</li>
+      </ul>
+    <p>Für eine detaillierte Liste bezieht man sich am besten auf:</p>
+    <a href="https://en.wikipedia.org/wiki/Comparison_of_IPv6_support_in_operating_systems" 
+       target="_blank">Comparison of IPv6 Support in Operating Systems</a>
+
+    <p><b>Kompatibilät zwischen IPv4 und IPv6?</b><p>
+    <p>IPv6 ist nicht rückwärtskompatibel zu IPv4. Geräte welche nur IPv4
+      unterstützen können mit IPv6 Traffic nicht umgehen.</p>
+    <p><b>Wie unterscheiden sich IPv4 und IPv6?</b><p>
+    <table>
+      <tr>
+        <td>
+          <p>
+          </p>
+        </td>
+        <td>
+          <p><strong>IPv4 </strong>
+          </p>
+        </td>
+        <td>
+          <p><strong>IPv6 </strong>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Address</strong></p>
+        </td>
+        <td>
+          <p>32 bits (4 bytes)<br/>
+          12:34:56:78</p>
+        </td>
+        <td>
+          <p>128 bits (16 bytes) 
+          </p>
+          <p>1234:5678:9abc:def0:</p>
+          <p>1234:5678:9abc:def0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Packet Grösse</strong></p>
+        </td>
+        <td>
+          <p>576 bytes minimum, Teilung möglich</p>
+        </td>
+        <td>
+          <p>1280 bytes minimum ohne Unterteilung</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Packet Unterteilung</strong></p>
+        </td>
+        <td>
+          <p>Routers und Sender</p>
+        </td>
+        <td>
+          <p>nur Sender</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <p><strong>Packet Header</strong></p>
+        </td>
+        <td>
+          <p>Packetfluss wird für QoS nicht untersucht.</p>
+        </td>
+        <td>
+          <p>Enthält Flow Label Feld welches einer Quelle ermöglicht <br/>Router
+            mitzuteilen wie sie das Packet priosieren sollen.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Enthält eine Prüfsumme.</p>
+        </td>
+        <td>
+          <p>Enthält keine Prüfsumme.</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Enthält Optionen<br/>
+    bis zu 40 Bytes</p>
+        </td>
+        <td>
+          <p>Extension Headers werden für optional Daten genutzt</p>
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          <p><strong>DNS Records</strong></p>
+        </td>
+        <td>
+          <p>Address (A) Records,<br/>
+          mappen Host Namen</p>
+        </td>
+        <td>
+          <p>Address (AAAA) Records,<br/>
+          mappen Host Namen</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Pointer (PTR) records,<br/>
+    IN-ADDR.ARPA DNS Domain</p>
+        </td>
+        <td>
+          <p>Pointer (PTR) records,<br/>
+    IP6.ARPA DNS Domain</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Adress Konfiguration</strong></p>
+        </td>
+        <td>
+          <p>Manuel oder via DHCP</p>
+        </td>
+        <td>
+          <p>automatische zustandslose Adress Konfiguration mit<br/> 
+            ICMPv6 oder DHCPv6</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>IP zu MAC Auflösung</strong></p>
+        </td>
+        <td>
+          <p>broadcast ARP</p>
+        </td>
+        <td>
+          <p>Multicast Neighbor Solicitation</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Lokales Subnet <br/>Gruppen Management</strong></p>
+        </td>
+        <td>
+          <p>Internet Group Management Protocol (IGMP)</p>
+        </td>
+        <td>
+          <p>Multicast Listener Discovery (MLD)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Broadcast</strong></p>
+        </td>
+        <td>
+          <p>Ja</p>
+        </td>
+        <td>
+          <p>Nein</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>Multicast</strong></p>
+        </td>
+        <td>
+          <p>Ja</p>
+        </td>
+        <td>
+          <p>Ja</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><strong>IPSec</strong></p>
+        </td>
+        <td>
+          <p>optional, muss extern realisiert werden</p>
+        </td>
+        <td>
+          <p>Teil des Standards</p>
+        </td>
+      </tr>
+    </table>
+</body>
+</html>
