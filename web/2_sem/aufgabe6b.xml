@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xsd:SchemaLocation="aufgabe6b.xsd">
+    <empNumber>1234</empNumber>
+    <firstname>Max</firstname>
+    <lastname>Muster</lastname>
+    <dateOfBirth>30.08.1010</dateOfBirth>
+    <department>Marketing</department>
+    <salary>50000</salary>
+</employee>
