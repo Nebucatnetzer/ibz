@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE collection SYSTEM 'recipes.dtd'>
+<collection>
+  <description>Dies ist ein Rezept für etwas zu bauen.</description>
+  <recipe>
+    <title>Brot</title>
+    <ingredient name="wasser" amount="2" unit="liter"/>
+    <ingredient name="mehl" amount="2" unit="kg"/>
+    <preparation>
+      <step>rühren</step>
+      <step>knetten</step>
+      <step>backen</step>
+    </preparation>
+    <comment>Dies ist ein Kommentar</comment>
+    <nutrition protein="2" carbohydrates="4" fat="7" calories="2000" alcohol="40"/>
+  </recipe>
+</collection>
