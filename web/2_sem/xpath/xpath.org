@@ -1,0 +1,93 @@
+* Aufgabe 1
+** a) /library/book/isbn
+#+BEGIN_SRC xml
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<isbn>0836217462</isbn>
+
+<isbn>045654656</isbn>
+
+</result>
+#+END_SRC
+** b) /library/book/title
+#+BEGIN_SRC xml
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<title lang="en">Being a Dog Is a Full-Time Job</title>
+
+<title lang="de">Das fliegende Klassenzimmer</title>
+
+</result>
+#+END_SRC
+** c) /library/book/author/name
+#+BEGIN_SRC xml
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<name>Charles M Schulz</name>
+
+<name>Erich Kästner</name>
+
+</result>
+#+END_SRC
+* Aufgabe 2
+** a) /library/book/character/name
+#+BEGIN_SRC xml
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+<name>Peppermint Patty</name>
+
+<name>Snoopy</name>
+
+<name>Schroeder</name>
+
+<name>Lucy</name>
+
+</result>
+#+END_SRC
+
+** b)
+* Vorgabe File
+#+BEGIN_SRC xml
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <book id="b0836217462" available="true">
+    <isbn>0836217462</isbn>
+    <title lang="en">Being a Dog Is a Full-Time Job</title>
+    <author id="CMS">
+      <name>Charles M Schulz</name>
+      <born>1922-11-26</born>
+      <dead>2000-02-12</dead>
+    </author>
+    <character id="PP">
+      <name>Peppermint Patty</name>
+      <born>1966-08-22</born>
+      <qualification>bold, brash and tomboyish</qualification>
+    </character>
+    <character id="Snoopy">
+      <name>Snoopy</name>
+      <born>1950-10-04</born>
+      <qualification>extroverted beagle</qualification>
+    </character>
+    <character id="Schroeder">
+      <name>Schroeder</name>
+      <born>1951-05-30</born>
+      <qualification>brought classical music to the Peanuts strip</qualification>
+    </character>
+    <character id="Lucy">
+      <name>Lucy</name>
+      <born>1952-03-03</born>
+      <qualification>bossy, crabby and selfish</qualification>
+    </character>
+  </book>
+  <book id="c06364656" available="true">
+    <isbn>045654656</isbn>
+    <title lang="de">Das fliegende Klassenzimmer</title>
+    <author id="EK">
+      <name>Erich Kästner</name>
+      <born>1899-02-23</born>
+      <dead>1974-07-29</dead>
+    </author>
+  </book>
+</library>
+#+END_SRC
+
