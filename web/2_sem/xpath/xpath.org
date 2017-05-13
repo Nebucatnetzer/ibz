@@ -1,3 +1,6 @@
+* Hilfsmittel
++ http://www.xpathtester.com/xpath
++ https://www.w3schools.com/xml/xpath_syntax.asp
 * Aufgabe 1
 ** a) /library/book/isbn
 #+BEGIN_SRC xml
@@ -45,7 +48,29 @@
   </result>
 #+END_SRC
 
-** b)
+** b) /library/book/author/born
+#+BEGIN_SRC xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <born>1922-11-26</born>
+
+    <born>1899-02-23</born>
+
+  </result>
+#+END_SRC
+
+** c) /library/book/author/dead
+#+BEGIN_SRC xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <dead>2000-02-12</dead>
+
+    <dead>1974-07-29</dead>
+
+  </result>
+#+END_SRC
+
+** d)
 * Vorgabe File
 #+BEGIN_SRC xml
 <?xml version="1.0" encoding="UTF-8"?>
