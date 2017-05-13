@@ -588,3 +588,6 @@ docs/_build/
 # PyBuilder
 target/
 
+
+# org-mode compile files
+**/auto
