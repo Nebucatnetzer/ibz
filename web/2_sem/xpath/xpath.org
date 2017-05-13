@@ -1,48 +1,48 @@
 * Aufgabe 1
 ** a) /library/book/isbn
 #+BEGIN_SRC xml
-<?xml version="1.0" encoding="UTF-8"?>
-<result>
-<isbn>0836217462</isbn>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <isbn>0836217462</isbn>
 
-<isbn>045654656</isbn>
+    <isbn>045654656</isbn>
 
-</result>
+  </result>
 #+END_SRC
 ** b) /library/book/title
 #+BEGIN_SRC xml
-<?xml version="1.0" encoding="UTF-8"?>
-<result>
-<title lang="en">Being a Dog Is a Full-Time Job</title>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <title lang="en">Being a Dog Is a Full-Time Job</title>
 
-<title lang="de">Das fliegende Klassenzimmer</title>
+    <title lang="de">Das fliegende Klassenzimmer</title>
 
-</result>
+  </result>
 #+END_SRC
 ** c) /library/book/author/name
 #+BEGIN_SRC xml
-<?xml version="1.0" encoding="UTF-8"?>
-<result>
-<name>Charles M Schulz</name>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <name>Charles M Schulz</name>
 
-<name>Erich Kästner</name>
+    <name>Erich Kästner</name>
 
-</result>
+  </result>
 #+END_SRC
 * Aufgabe 2
 ** a) /library/book/character/name
 #+BEGIN_SRC xml
-<?xml version="1.0" encoding="UTF-8"?>
-<result>
-<name>Peppermint Patty</name>
+  <?xml version="1.0" encoding="UTF-8"?>
+  <result>
+    <name>Peppermint Patty</name>
 
-<name>Snoopy</name>
+    <name>Snoopy</name>
 
-<name>Schroeder</name>
+    <name>Schroeder</name>
 
-<name>Lucy</name>
+    <name>Lucy</name>
 
-</result>
+  </result>
 #+END_SRC
 
 ** b)
