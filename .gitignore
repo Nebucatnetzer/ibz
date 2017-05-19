@@ -588,3 +588,21 @@ docs/_build/
 # PyBuilder
 target/
 
+
+# org-mode compile files
+**/auto
+
+#latex compile files
+*.aux
+*.acn
+*.bbl
+*.blg
+*.glo
+*.ist
+*.lof
+*.log
+*.lot
+*.out
+*.pdf
+*.toc
+*.gz
