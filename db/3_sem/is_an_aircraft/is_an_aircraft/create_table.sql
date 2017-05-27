@@ -40,19 +40,19 @@ if not exists (select * from sysobjects where name='Zeppelin')
     );
 
 -- Foreign Key Constraints hinzufügen
-IF OBJECT_ID('dbo.[FK_LFZ_ID]', 'F') IS NULL
-    ALTER TABLE Flugzeug ADD CONSTRAINT FK_LFZ_ID
+IF OBJECT_ID('dbo.[FK_FLZ_ID]', 'F') IS NULL
+    ALTER TABLE Flugzeug ADD CONSTRAINT FK_FLZ_ID
         FOREIGN KEY (FLZ_ID) REFERENCES Luftfahrzeug (LFZ_ID);
 go
 
 -- Foreign Key Constraints hinzufügen
-IF OBJECT_ID('dbo.[FK_LFZ_ID]', 'F') IS NULL
+IF OBJECT_ID('dbo.[FK_HUB_ID]', 'F') IS NULL
     ALTER TABLE Hubschrauber ADD CONSTRAINT FK_HUB_ID
         FOREIGN KEY (HUB_ID) REFERENCES Luftfahrzeug (LFZ_ID);
 go
 
 -- Foreign Key Constraints hinzufügen
-IF OBJECT_ID('dbo.[FK_LFZ_ID]', 'F') IS NULL
+IF OBJECT_ID('dbo.[FK_ZEP_ID]', 'F') IS NULL
     ALTER TABLE Zeppelin ADD CONSTRAINT FK_ZEP_ID
         FOREIGN KEY (ZEP_ID) REFERENCES Luftfahrzeug (LFZ_ID);
 go
