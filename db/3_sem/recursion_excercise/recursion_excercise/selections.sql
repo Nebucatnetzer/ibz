@@ -6,18 +6,8 @@
 -- Datum: 2017-05-28
 -- Server Version: SQL Server 2016
 
-use Luftfahrzeuge
-select l.LFZ_ID, l.LFZ_HERSTELLER, l.LFZ_BAUJAHR,
-    f.FLU_SPANNWEITE from Luftfahrzeug l
-    inner join Flugzeug f
-        on f.FLZ_ID = l.LFZ_ID;
-
-select l.LFZ_ID, l.LFZ_HERSTELLER, l.LFZ_BAUJAHR,
-    h.HUB_ROTORDURCHMESSER from Luftfahrzeug l
-    inner join Hubschrauber h
-        on h.HUB_ID = l.LFZ_ID;
-
-select l.LFZ_ID, l.LFZ_HERSTELLER, l.LFZ_BAUJAHR,
-    z.ZEP_GASVOLUMEN from Luftfahrzeug l
-    inner join Zeppelin z
-        on z.ZEP_ID = l.LFZ_ID;
+use bike_shop
+select t.TNr, t.Bezeichnung, t.Typ,
+    s.Position, s.OTeil, s.Menge from teile t
+    inner join struktur s
+        on t.TNr = s.OTeil;
