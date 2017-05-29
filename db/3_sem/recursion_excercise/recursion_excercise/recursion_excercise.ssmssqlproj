@@ -37,6 +37,12 @@
           <AssociatedConnUserName />
           <FullPath>remove_database.sql</FullPath>
         </FileNode>
+        <FileNode Name="selections.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>selections.sql</FullPath>
+        </FileNode>
         <FileNode Name="TeileInsert.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
