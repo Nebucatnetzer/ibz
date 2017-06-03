@@ -2,7 +2,7 @@ use Abo;
 go
 
 -- create a view
-create view mitglieder_liste
+create view mitglieder_liste(Anr, Vor, Nach)
 as
 select	anrede.anrede,
 		mitglied.mitglied_vorname,
@@ -16,3 +16,6 @@ use Abo;
 go
 
 select * from mitglieder_liste;
+go
+
+drop view mitglieder_liste;
