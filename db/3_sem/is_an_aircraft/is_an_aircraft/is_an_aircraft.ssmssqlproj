@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="is_an_aircraft">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="WIN-10-SFR\SQL2016:WIN-10-SFR\andreas">
+          <Created>2017-05-27T17:43:46.0617539+02:00</Created>
+          <Type>SQL</Type>
+          <Server>WIN-10-SFR\SQL2016</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="create_database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="create_table.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>create_table.sql</FullPath>
+        </FileNode>
+        <FileNode Name="insert_data.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>insert_data.sql</FullPath>
+        </FileNode>
+        <FileNode Name="remove_database.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>remove_database.sql</FullPath>
+        </FileNode>
+        <FileNode Name="selections.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:WIN-10-SFR\SQL2016:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>WIN-10-SFR\SQL2016</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>selections.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

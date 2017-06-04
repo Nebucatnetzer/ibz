@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Abo">
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="recursion_excercise">
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="(local)\SQLEXPRESS:WIN-LAPTOP\andreas">
-          <Created>2017-06-03T11:37:38.3249035+02:00</Created>
+          <Created>2017-06-03T08:55:35.46851+02:00</Created>
           <Type>SQL</Type>
           <Server>(local)\SQLEXPRESS</Server>
           <UserName />
@@ -19,29 +19,35 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="create_tables.sql">
+        <FileNode Name="create_database.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>create_tables.sql</FullPath>
+          <FullPath>create_database.sql</FullPath>
         </FileNode>
-        <FileNode Name="insert_data.sql">
+        <FileNode Name="create_table.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>insert_data.sql</FullPath>
+          <FullPath>create_table.sql</FullPath>
         </FileNode>
-        <FileNode Name="remove_tables.sql">
+        <FileNode Name="remove_database.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>remove_tables.sql</FullPath>
+          <FullPath>remove_database.sql</FullPath>
         </FileNode>
-        <FileNode Name="select_statements.sql">
+        <FileNode Name="selections.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>select_statements.sql</FullPath>
+          <FullPath>selections.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TeileInsert.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TeileInsert.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
