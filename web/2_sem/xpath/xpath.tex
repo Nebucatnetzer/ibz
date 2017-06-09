@@ -1,0 +1,130 @@
+% Created 2017-05-13 Sat 10:15
+% Intended LaTeX compiler: pdflatex
+\documentclass{az_article}
+\author{Andreas Zweili}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Andreas Zweili},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+    \newpage
+    \section{Aufgabe 1}
+\label{sec:org306d8a3}
+\subsection{a) /library/book/isbn}
+\label{sec:org15353ce}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+  <isbn>0836217462</isbn>
+
+  <isbn>045654656</isbn>
+
+</result>
+\end{verbatim}
+\subsection{b) /library/book/title}
+\label{sec:org2dca311}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+  <title lang="en">Being a Dog Is a Full-Time Job</title>
+
+  <title lang="de">Das fliegende Klassenzimmer</title>
+
+</result>
+\end{verbatim}
+\subsection{c) /library/book/author/name}
+\label{sec:org6f5e358}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+  <name>Charles M Schulz</name>
+
+  <name>Erich Kästner</name>
+
+</result>
+\end{verbatim}
+\section{Aufgabe 2}
+\label{sec:org4522724}
+\subsection{a) /library/book/character/name}
+\label{sec:org34dda39}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+  <name>Peppermint Patty</name>
+
+  <name>Snoopy</name>
+
+  <name>Schroeder</name>
+
+  <name>Lucy</name>
+
+</result>
+\end{verbatim}
+
+\subsection{b) /lib/book/author/born}
+\label{sec:org414aad7}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<result>
+  <born>1922-11-26</born>
+
+  <born>1899-02-23</born>
+
+</result>
+\end{verbatim}
+
+\subsection{c)}
+\label{sec:org7021094}
+\section{Vorgabe File}
+\label{sec:orgc3d654c}
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <book id="b0836217462" available="true">
+    <isbn>0836217462</isbn>
+    <title lang="en">Being a Dog Is a Full-Time Job</title>
+    <author id="CMS">
+      <name>Charles M Schulz</name>
+      <born>1922-11-26</born>
+      <dead>2000-02-12</dead>
+    </author>
+    <character id="PP">
+      <name>Peppermint Patty</name>
+      <born>1966-08-22</born>
+      <qualification>bold, brash and tomboyish</qualification>
+    </character>
+    <character id="Snoopy">
+      <name>Snoopy</name>
+      <born>1950-10-04</born>
+      <qualification>extroverted beagle</qualification>
+    </character>
+    <character id="Schroeder">
+      <name>Schroeder</name>
+      <born>1951-05-30</born>
+      <qualification>brought classical music to the Peanuts strip</qualification>
+    </character>
+    <character id="Lucy">
+      <name>Lucy</name>
+      <born>1952-03-03</born>
+      <qualification>bossy, crabby and selfish</qualification>
+    </character>
+  </book>
+  <book id="c06364656" available="true">
+    <isbn>045654656</isbn>
+    <title lang="de">Das fliegende Klassenzimmer</title>
+    <author id="EK">
+      <name>Erich Kästner</name>
+      <born>1899-02-23</born>
+      <dead>1974-07-29</dead>
+    </author>
+  </book>
+</library>
+\end{verbatim}
+\end{document}
