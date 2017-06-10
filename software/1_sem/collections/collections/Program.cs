@@ -26,10 +26,10 @@ namespace collections
           cdQueue.Enqueue(new CD("Wintersun","Time 1"));
 
           CD result = cdQueue.Peek();
-          Console.WriteLine("Queue:" + result.Interpret);
+          Console.WriteLine("Queue before Dequeue:" + result.Interpret);
           cdQueue.Dequeue();
           CD result2 = cdQueue.Peek();
-          Console.WriteLine("Queue:" + result2.Interpret);
+          Console.WriteLine("Queue after Dequeue:" + result2.Interpret);
 
           foreach (var queueitem in cdQueue)
           {
@@ -43,10 +43,11 @@ namespace collections
           cdStack.Push(new CD("Windir","1184"));
 
           CD topcd = cdStack.Peek();
-          Console.WriteLine("Stack:" + topcd.Interpret);
+          Console.WriteLine("Stack befor Pop:" + topcd.Interpret);
 
           CD takeawaycd = cdStack.Pop();
-          Console.WriteLine("Stack:" + takeawaycd.Interpret);
+          CD topcd2 = cdStack.Peek();
+          Console.WriteLine("Stack after Pop:" + topcd2.Interpret);
 
           foreach (var stackitem in cdStack)
           {
