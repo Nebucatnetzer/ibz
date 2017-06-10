@@ -19,12 +19,8 @@ namespace iterations
                         result = result + i.ToString() + ",";
                     }
                 }
-                
                 Console.WriteLine(result);
-                
             }
-
-
         }
     }
 }
