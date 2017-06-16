@@ -69,9 +69,11 @@ drop view mitglied_zuerich_v;
 use Abo;
 go
 
-create view mitglied_aboart_v(AboArt, 'Anzahl Mitglieder')
-as select
-    abo.aboname,
+create view mitglied_aboart_v(AboArt, Anzahl)
+as select abo.abo_name, COUNT(abo.abo_id) AS MitgliederProAbo 
+FROM mitglied
+INNER JOIN abo ON mitglied.abo_id = abo.abo_id
+GROUP BY abo.abo_name;
 
 
 use Abo;
