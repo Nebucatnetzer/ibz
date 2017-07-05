@@ -9,11 +9,11 @@ namespace se_12_log_entry
         public static void Main(string[] args)
         {
             Stack<LogEntry> logEntries = new Stack<LogEntry>();
-            int id_counter = 0;
-            while (id_counter < 11)
+            int idCounter = 0;
+            while (idCounter < 11)
             {
-                logEntries.Push(new LogEntry(id_counter, DateTime.Now));
-                    id_counter++;
+                logEntries.Push(new LogEntry(idCounter, DateTime.Now));
+                    idCounter++;
 
                 LogEntry newestEntry = logEntries.Peek();
                 Console.WriteLine("ID:"
