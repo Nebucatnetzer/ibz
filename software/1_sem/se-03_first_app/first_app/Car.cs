@@ -20,7 +20,7 @@ namespace first_app
 //            set { _number = value; }
 //        }
   
-        public Car(string _number)
+        public Car(string _number = "999")
         {
             this.number = _number;
         }

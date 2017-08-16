@@ -25,7 +25,7 @@ namespace first_app
 
             Console.WriteLine("Please enter your car number");
             string car_number = Console.ReadLine();
-            Car first_car = new Car(car_number);
+            Car first_car = new Car();
             Console.WriteLine(first_car.number);
 
             Console.ReadKey();
