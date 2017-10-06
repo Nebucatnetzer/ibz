@@ -607,3 +607,4 @@ target/
 *.toc
 *.gz
 .idea
+.vagrant
