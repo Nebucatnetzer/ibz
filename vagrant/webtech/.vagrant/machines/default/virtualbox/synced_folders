@@ -1,1 +1,0 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/andreas/git_repos/ibz_repos/ibz/vagrant/webtech","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}},"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"/home/andreas/git_repos/ibz_repos/ibz/web/1_sem","disabled":false,"__vagrantfile":true}}}
