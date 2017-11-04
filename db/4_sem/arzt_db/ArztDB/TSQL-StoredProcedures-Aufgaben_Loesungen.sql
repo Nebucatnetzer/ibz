@@ -8,7 +8,10 @@ use ArztDB;
 go
 
 --A2.1
-CREATE PROCEDURE uspScores
+if OBJECT_ID('uspScoresA2_1') is not null
+    drop procedure uspScoresA2_1
+go
+CREATE PROCEDURE uspScoresA2_1
 	-- Add the parameters for the stored procedure here
 	@value1 int = 0,
     @value2 int = 0,
@@ -28,24 +31,27 @@ END
 GO
 
 DECLARE @SumScore smallint
-EXEC uspScores 10, 9, 8, 8, 10, @SumScore OUTPUT
+EXEC uspScoresA2_1 10, 9, 8, 8, 10, @SumScore OUTPUT
 SELECT 'The Sum Score is: ', @SumScore
 GO
 
 --A2.2
-declare @SumScore smallint = 0
-exec uspScores
+declare @SumScoreA2_1 smallint = 0
+exec uspScoresA2_1
     @value1 = 10,
     @value2 = 9,
     @value3 = 8,
     @value4 = 8,
     @value5 = 10,
-    @result = @Sumscore OUTPUT
+    @result = @SumScoreA2_1 OUTPUT
 
-Select 'Die Summe ist: ', @SumScore
+Select 'Die Summe ist: ', @SumScoreA2_1
 go
 
 --A2.3
+if OBJECT_ID('uspScoresA2_3') is not null
+    drop procedure uspScoresA2_3
+go
 CREATE PROCEDURE uspScoresA2_3
 	-- Add the parameters for the stored procedure here
 	@value1 int = 0,
