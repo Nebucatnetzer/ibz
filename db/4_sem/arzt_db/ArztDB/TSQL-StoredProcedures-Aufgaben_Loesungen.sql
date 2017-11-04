@@ -150,3 +150,106 @@ GO
 exec usp_ListOfDoctorsA2_5
 go
 
+--A2.6
+if OBJECT_ID('usp_InsertNewCityA2_6') is not null
+    drop procedure usp_InsertNewCityA2_6
+go
+
+CREATE PROCEDURE usp_InsertNewCityA2_6
+    (
+    @CityName varchar(30),
+    @PLZ int
+    )
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    insert into Ort (PLZ, Ort)
+        values (@PLZ, @CityName);
+    END
+GO
+
+exec usp_InsertNewCityA2_6 'Herzogenbuchsee', 3360
+go
+
+
+--A2.6.1
+if OBJECT_ID('usp_InsertNewCityA2_6_1') is not null
+    drop procedure usp_InsertNewCityA2_6_1
+go
+
+CREATE PROCEDURE usp_InsertNewCityA2_6_1
+    (
+    @CityName varchar(30),
+    @PLZ int
+    )
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    if (select count(*) from Ort where PLZ = @PLZ) = 0
+        begin
+            print 'Ort wird hinzugefügt.';
+            insert into Ort (PLZ, Ort)
+                values (@PLZ, @CityName)
+        end
+    else
+        begin
+            print 'Ortschaft existiert bereits.';
+            update Ort
+                set Ort.Ort = @CityName
+                where Ort.PLZ = @PLZ;
+        end
+    END
+GO
+
+exec usp_InsertNewCityA2_6_1
+    @CityName = 'Thörigen',
+    @PLZ = 3361
+go
+
+--A2.6.2
+if OBJECT_ID('usp_InsertNewCityA2_6_2') is not null
+    drop procedure usp_InsertNewCityA2_6_2
+go
+
+CREATE PROCEDURE usp_InsertNewCityA2_6_2
+    (
+    @CityName varchar(30),
+    @PLZ int
+    )
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    if not exists (select OrtNr from Ort where PLZ = @PLZ)
+        begin
+            print 'Ort wird hinzugefügt.';
+            insert into Ort (PLZ, Ort)
+                values (@PLZ, @CityName)
+        end
+    else
+        begin
+            print 'Ortschaft existiert bereits.';
+            update Ort
+                set Ort.Ort = @CityName
+                where Ort.PLZ = @PLZ;
+        end
+    END
+GO
+
+exec usp_InsertNewCityA2_6_2
+    @CityName = 'Thörigen',
+    @PLZ = 3361
+go
+
+select * from Ort;
