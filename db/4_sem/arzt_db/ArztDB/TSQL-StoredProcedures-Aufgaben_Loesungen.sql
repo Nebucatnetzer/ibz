@@ -32,3 +32,15 @@ EXEC uspScores 10, 9, 8, 8, 10, @SumScore OUTPUT
 SELECT 'The Sum Score is: ', @SumScore
 GO
 
+--A2.2
+declare @SumScore smallint = 0
+exec uspScores
+    @value1 = 10,
+    @value2 = 9,
+    @value3 = 8,
+    @value4 = 8,
+    @value5 = 10,
+    @result = @Sumscore OUTPUT
+
+Select 'Die Summe ist: ', @SumScore
+go
