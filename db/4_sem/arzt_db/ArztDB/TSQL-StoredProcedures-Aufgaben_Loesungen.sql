@@ -4,6 +4,9 @@
 -- 2017-11-04
 -- SQLServer 2016
 
+use ArztDB;
+go
+
 --A2.1
 CREATE PROCEDURE scores
 	-- Add the parameters for the stored procedure here
