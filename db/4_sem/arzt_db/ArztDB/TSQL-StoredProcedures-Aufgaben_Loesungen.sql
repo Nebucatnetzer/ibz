@@ -90,3 +90,36 @@ if @option = 0
 else
     select 'Das Produkt ist: ', @SumScore
 go
+
+
+--A2.4
+if OBJECT_ID('usp_NumberOfConsultationsA2_4') is not null
+    drop procedure usp_NumberOfConsultationsA2_4
+go
+
+CREATE PROCEDURE usp_NumberOfConsultationsA2_4
+	-- Add the parameters for the stored procedure here
+	(@parameter varchar(30),
+     @result int output)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    select @result=count(*) from Konsultation
+        inner join Diagnose
+            on Konsultation.DiagnoseNr = Diagnose.DiagnoseNr
+        where Diagnose.DiagnoseName = @parameter;
+    END
+GO
+
+declare @numberOfConsultations int = 0;
+declare @diagnoseName varchar(30) = 'Röteln';
+
+exec usp_NumberOfConsultationsA2_4
+    @parameter = @diagnoseName,
+    @result = @numberOfConsultations output
+    Select 'Die Anzahl an Diagnosen für ' + @diagnoseName + ' ist: ' + CONVERT(varchar, @numberOfConsultations)
+go

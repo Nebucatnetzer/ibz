@@ -7,6 +7,8 @@
 /* Script type:           Database drop script                            */
 /* Created on:            2014-12-06 15:06                                */
 /* ---------------------------------------------------------------------- */
+use ArztDB;
+go
 
 -- Tabelle Ort
 insert into [Ort] ([PLZ], [ORT])
