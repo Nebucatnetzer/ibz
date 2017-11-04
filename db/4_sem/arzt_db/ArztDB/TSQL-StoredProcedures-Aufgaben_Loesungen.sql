@@ -123,3 +123,30 @@ exec usp_NumberOfConsultationsA2_4
     @result = @numberOfConsultations output
     Select 'Die Anzahl an Diagnosen für ' + @diagnoseName + ' ist: ' + CONVERT(varchar, @numberOfConsultations)
 go
+
+--A2.5
+if OBJECT_ID('usp_ListOfDoctorsA2_5') is not null
+    drop procedure usp_ListOfDoctorsA2_5
+go
+
+CREATE PROCEDURE usp_ListOfDoctorsA2_5
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+    -- Insert statements for procedure here
+    select
+        Arzt.ArztNr,
+        Arzt.ArztName,
+        Ort.PLZ,
+        Ort.Ort
+    from Arzt
+        inner join Ort on Arzt.OrtNr = Ort.OrtNr;
+    END
+GO
+
+exec usp_ListOfDoctorsA2_5
+go
+
