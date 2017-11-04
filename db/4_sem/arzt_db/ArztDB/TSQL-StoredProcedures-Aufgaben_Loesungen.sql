@@ -8,7 +8,7 @@ use ArztDB;
 go
 
 --A2.1
-CREATE PROCEDURE scores
+CREATE PROCEDURE uspScores
 	-- Add the parameters for the stored procedure here
 	@value1 int = 0,
     @value2 int = 0,
@@ -28,6 +28,7 @@ END
 GO
 
 DECLARE @SumScore smallint
-EXEC scores 10, 9, 8, 8, 10, @SumScore OUTPUT
+EXEC uspScores 10, 9, 8, 8, 10, @SumScore OUTPUT
 SELECT 'The Sum Score is: ', @SumScore
 GO
+
