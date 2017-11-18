@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Employee Index</h2>
+<button type="button" onclick="ReturnEmployees()">Click to show workers.</button>
+</body>
+<ul id="demo"></ul>
+
+<script>
+ function ReturnEmployees(){
+     var xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+         if (this.readyState == 4 && this.status == 200) {
+
+             var text = document.getElementById("demo");
+             var employees = JSON.parse(this.responseText);
+             for (i = 0; i < employees.id.length; i++) {
+                 var id = employees.id[i];
+                 text.innerHTML += "<li>" + id.name + ", " + id.vorname + "</li>"
+             }
+         }
+     };
+     xhttp.open("GET", "namen.json", true);
+     xhttp.send();
+ }
+</script>
+</html>
+

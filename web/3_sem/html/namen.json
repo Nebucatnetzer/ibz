@@ -1,0 +1,16 @@
+{
+    "id":[
+        {
+            "name": "muster",
+            "vorname": "max"
+        },
+        {
+            "name": "vögeli",
+            "vorname": "christian"
+        },
+        {
+            "name": "hörler",
+            "vorname": "ivan"
+        }
+        ]
+}

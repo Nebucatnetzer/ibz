@@ -1,0 +1,1 @@
+<img src="schottland.jpg" alt="Schottland" style="width:500px;height:600px;">
