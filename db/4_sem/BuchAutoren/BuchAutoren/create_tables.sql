@@ -1,4 +1,10 @@
-CREATE DATABASE buch;
+-- CREATE DATABASE BuchAutorDB;
+
+USE [BuchAutorDB]
+GO
+-- Schema erstellen
+CREATE SCHEMA [buch] AUTHORIZATION [dbo]
+GO
 
 CREATE TABLE buch.tblBank
 (
