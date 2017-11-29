@@ -77,6 +77,7 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="titles.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="StringConverter.aspx.designer.cs">
       <DependentUpon>StringConverter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="titles.aspx.cs">
+      <DependentUpon>titles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="titles.aspx.designer.cs">
+      <DependentUpon>titles.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
