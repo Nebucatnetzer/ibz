@@ -65,6 +65,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="multiplication_table.aspx" />
     <Content Include="packages.config" />
     <Content Include="random_numbers.aspx" />
     <Content Include="StringConverter.aspx" />
@@ -82,6 +83,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="multiplication_table.aspx.cs">
+      <DependentUpon>multiplication_table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="multiplication_table.aspx.designer.cs">
+      <DependentUpon>multiplication_table.aspx</DependentUpon>
+    </Compile>
     <Compile Include="random_numbers.aspx.cs">
       <DependentUpon>random_numbers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
