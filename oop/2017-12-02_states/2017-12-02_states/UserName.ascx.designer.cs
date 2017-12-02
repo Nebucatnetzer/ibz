@@ -10,15 +10,15 @@
 namespace _2017_12_02_states {
     
     
-    public partial class MasterPageExample {
+    public partial class WebUserControl1 {
         
         /// <summary>
-        /// UserName control.
+        /// LabelUsername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::_2017_12_02_states.WebUserControl1 UserName;
+        protected global::System.Web.UI.WebControls.Label LabelUsername;
     }
 }

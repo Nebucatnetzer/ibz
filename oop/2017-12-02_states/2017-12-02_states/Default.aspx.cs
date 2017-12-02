@@ -12,7 +12,6 @@ namespace _2017_12_02_states
         protected void Page_Load(object sender, EventArgs e)
 
         {
-
         }
         protected void ButtonDefault_Click(object sender, EventArgs e)
         {

@@ -17,8 +17,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -70,6 +70,7 @@
     <Content Include="MasterPageExample.aspx" />
     <Content Include="packages.config" />
     <Content Include="Default.Master" />
+    <Content Include="UserName.ascx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="SecondPage.aspx.designer.cs">
       <DependentUpon>SecondPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserName.ascx.cs">
+      <DependentUpon>UserName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserName.ascx.designer.cs">
+      <DependentUpon>UserName.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

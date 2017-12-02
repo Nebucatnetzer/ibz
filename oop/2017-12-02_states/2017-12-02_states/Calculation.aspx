@@ -15,10 +15,10 @@
             <asp:TextBox ID="TextBoxValue2" runat="server"></asp:TextBox>
             <br />
             <br />
-            <asp:RadioButton ID="RadioButtonSubtraction" runat="server" Text="Subtraction"/>
+            <asp:RadioButton ID="RadioButtonSubtraction" GroupName="selection" runat="server" Text="Subtraction"/>
             <br />
             <br />
-            <asp:RadioButton ID="RadioButtonAddition" runat="server" Text="Addition"/>
+            <asp:RadioButton ID="RadioButtonAddition" GroupName="selection" runat="server" Text="Addition"/>
             <br />
             <br />
             <asp:Button ID="ButtonCalculate" runat="server" Text="Calculate" OnClick="ButtonCalculate_Click" />

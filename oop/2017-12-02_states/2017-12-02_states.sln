@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2017-12-02_states", "2017-12-02_states\2017-12-02_states.csproj", "{3A1729B4-F3DA-4FF4-84C2-502F2DA2788C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2017j-12-02_states", "2017-12-02_states\2017j-12-02_states.csproj", "{3A1729B4-F3DA-4FF4-84C2-502F2DA2788C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
