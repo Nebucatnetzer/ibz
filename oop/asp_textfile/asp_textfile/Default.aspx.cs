@@ -9,6 +9,9 @@ namespace asp_textfile
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+
+        public delegate void DelText(_input);
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,8 +21,21 @@ namespace asp_textfile
         {
 
 
-            // https://stackoverflow.com/questions/1268766/writing-file-to-web-server-asp-net#1268773
-            WriteToFile.SaveToFile(UserInputBox.Text, Server.MapPath("~/string_data.txt"));
+            DelText dt;
+            dt = WriteToFile.Write;
+            if (UserInputBox_Checked) {
+                dt += ReturnTextFile.Read
+            }
+
+            filePath = Server.MapPath("~/string_data.txt")
+            dt(UserInputBox.Text, filePath)
+
+                public static class ReturnTextFile {
+
+                    public static void Read(_path){
+
+                    }
+            }
         }
 
         protected void UserInputBox_TextChanged(object sender, EventArgs e)

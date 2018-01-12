@@ -10,8 +10,12 @@ namespace asp_textfile
 {
     public static class WriteToFile
     {
-        public static void SaveToFile(string _input, string path)
+        public static void Write(string _input, string path)
         {
+            using (StreamWriter _rawData = new StreamWriter(path, true))
+            {
+                _rawData.WriteLine(_input); // Write the file.
+            }
             File.WriteAllText(path, _input);
         }
     }
