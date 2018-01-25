@@ -8,7 +8,7 @@ namespace notenbewertung
 {
     class Dozent : Person
     {
-    public Dozent(string _vorname, string _name)
+        public Dozent(string _vorname, string _name)
         {
             this.Vorname = _vorname;
             this.Name = _name;

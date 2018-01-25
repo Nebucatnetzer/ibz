@@ -27,7 +27,7 @@ namespace notenbewertung
                     this.summe += i.Note;
                     counter++;
                 }
-                return this.summe / counter;
+                return Math.Round(this.summe / counter,2);
             }
             return this.summe;
         }

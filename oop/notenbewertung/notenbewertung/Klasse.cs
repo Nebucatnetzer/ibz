@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace notenbewertung
 {
-    class Klasse
+    class Klasse : List<Person>
     {
-        List<Person> personen = new List<Person>();
         public string Klassenbezeichnung { get; set; }
 
         public Klasse(string _Klassenbezeichnung)
