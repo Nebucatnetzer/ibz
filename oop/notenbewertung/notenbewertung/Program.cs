@@ -48,11 +48,11 @@ namespace notenbewertung
             ti3.Personen.Add(herren);
 
             Console.WriteLine(ibz.Standort);
-            Console.WriteLine("------");
+            Console.WriteLine();
             foreach (Klasse klasse in ibz.Klassen)
             {
                 Console.WriteLine(klasse.Klassenbezeichnung);
-                Console.WriteLine("------");
+                Console.WriteLine();
                 foreach (Person person in klasse.Personen)
                 {
                     Console.WriteLine(person.Name + " " + person.Vorname);
@@ -61,6 +61,10 @@ namespace notenbewertung
                         Student s = (Student)person;
                         Console.WriteLine("Notendurchschnitt: ");
                         s.GetNotenDurchSchnitt();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Dozent");
                     }
                     Console.WriteLine();
                 }
