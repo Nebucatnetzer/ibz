@@ -20,6 +20,22 @@ namespace design_patterns
             EagerSingleton.Instance.value = "Hello from EagerSingleton";
             Console.WriteLine(EagerSingleton.Instance.value);
             Console.ReadKey();
+            Console.WriteLine("--------");
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Proxys");
+            Console.WriteLine("--------");
+            Driver max = new Driver(17);
+            Driver heinz = new Driver(12);
+            ProxyCar ferarri = new ProxyCar();
+            Console.WriteLine("Let max drive");
+            ferarri.MoveCar(max);
+            Console.WriteLine();
+            Console.WriteLine("Let heinz drive");
+            ferarri.MoveCar(heinz);
+            Console.ReadKey();
+
         }
     }
 }
