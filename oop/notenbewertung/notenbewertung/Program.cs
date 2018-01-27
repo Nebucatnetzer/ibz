@@ -65,6 +65,7 @@ namespace notenbewertung
                     else
                     {
                         Console.WriteLine("Dozent");
+
                     }
                     Console.WriteLine();
                 }
