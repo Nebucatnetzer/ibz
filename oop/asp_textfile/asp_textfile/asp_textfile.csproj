@@ -78,6 +78,7 @@
     <Content Include="Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReadFile.cs" />
     <Compile Include="WriteToFile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default.aspx.cs">

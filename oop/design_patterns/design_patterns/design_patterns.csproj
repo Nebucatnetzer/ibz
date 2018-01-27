@@ -42,14 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Driver.cs" />
-    <Compile Include="EagerSingleton.cs" />
-    <Compile Include="ICar.cs" />
-    <Compile Include="LazySingleton.cs" />
+    <Compile Include="Mediator\Client.cs" />
+    <Compile Include="Mediator\DevTeam.cs" />
+    <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Proxy\Driver.cs" />
+    <Compile Include="Singleton\EagerSingleton.cs" />
+    <Compile Include="Proxy\ICar.cs" />
+    <Compile Include="Singleton\LazySingleton.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="ProxyCar.cs" />
+    <Compile Include="Proxy\Car.cs" />
+    <Compile Include="Proxy\ProxyCar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

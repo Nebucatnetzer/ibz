@@ -10,7 +10,7 @@ namespace asp_textfile
     public partial class WebForm1 : System.Web.UI.Page
     {
 
-        public delegate void DelText(_input);
+        public delegate void DelText();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -22,20 +22,13 @@ namespace asp_textfile
 
 
             DelText dt;
+            string filePath = Server.MapPath("~/string_data.txt");
             dt = WriteToFile.Write;
+            dt(UserInputBox.Text, filePath);
             if (UserInputBox_Checked) {
-                dt += ReturnTextFile.Read
+                dt += ReturnTextFile.Read(filePath);
             }
 
-            filePath = Server.MapPath("~/string_data.txt")
-            dt(UserInputBox.Text, filePath)
-
-                public static class ReturnTextFile {
-
-                    public static void Read(_path){
-
-                    }
-            }
         }
 
         protected void UserInputBox_TextChanged(object sender, EventArgs e)

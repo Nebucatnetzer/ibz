@@ -34,6 +34,18 @@ namespace design_patterns
             Console.WriteLine();
             Console.WriteLine("Let heinz drive");
             ferarri.MoveCar(heinz);
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Mediator");
+            Console.WriteLine("--------");
+            Mediator mediator = new Mediator();
+            Client client = new Client(mediator);
+            DevTeam devteam = new DevTeam(mediator);
+            mediator.client = client;
+            mediator.devteam = devteam;
+            client.SendMessageToMediator("Hello DevTeam");
+            devteam.SendMessageToMediator("Hello Client");
             Console.ReadKey();
 
         }
