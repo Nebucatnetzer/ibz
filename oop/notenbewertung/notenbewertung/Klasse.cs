@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace notenbewertung
 {
-    class Klasse : List<Person>
+    class Klasse
     {
         public string Klassenbezeichnung { get; set; }
+        public List<Person> Personen { get; set; }
 
         public Klasse(string _Klassenbezeichnung)
         {
             this.Klassenbezeichnung = _Klassenbezeichnung;
+            this.Personen = new List<Person>();
         }
     }
 }

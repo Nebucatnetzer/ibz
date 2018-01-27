@@ -9,27 +9,22 @@ namespace notenbewertung
     class Student : Person
     {
         public List<Testresultat> noten = new List<Testresultat>();
-        double summe;
-        public Student(string _vorname, string _name)
+        public Student(string _vorname, string _name) : base(_vorname, _name)
         {
-            this.Vorname = _vorname;
-            this.Name = _name;
+
         }
 
-        public double GetNotenDurchSchnitt()
+        public void GetNotenDurchSchnitt()
         {
             if (noten.Count > 0)
             {
-                int counter = 0;
-                this.summe = 0;
-                foreach (var i in noten)
-                {
-                    this.summe += i.Note;
-                    counter++;
-                }
-                return Math.Round(this.summe / counter,2);
+                double result = Math.Round(this.noten.Average(n => n.Note), 2);
+                Console.WriteLine(result);
             }
-            return this.summe;
+            else
+            {
+                Console.WriteLine("Der Student hat noch keine N0ten.");
+            }
         }
     }
 }

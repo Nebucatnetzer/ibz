@@ -10,6 +10,10 @@ namespace notenbewertung
     {
         public string Vorname { get; set; }
         public string Name { get; set; }
-
+        public Person(string _vorname, string _name)
+        {
+            this.Vorname = _vorname;
+            this.Name = _name;
+        }
     }
 }

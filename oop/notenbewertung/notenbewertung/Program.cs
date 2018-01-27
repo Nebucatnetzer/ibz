@@ -37,34 +37,35 @@ namespace notenbewertung
             max.noten.Add(exam6);
 
             // each class needs a school
-            ibz.Add(ti5);
-            ibz.Add(ti3);
+            ibz.Klassen.Add(ti5);
+            ibz.Klassen.Add(ti3);
 
             // many people belong to a class
-            ti5.Add(thomas);
-            ti5.Add(andreas);
+            ti5.Personen.Add(thomas);
+            ti5.Personen.Add(andreas);
 
-            ti3.Add(max);
-            ti3.Add(herren);
+            ti3.Personen.Add(max);
+            ti3.Personen.Add(herren);
 
             Console.WriteLine(ibz.Standort);
             Console.WriteLine("------");
-            foreach (var klasse in ibz)
+            foreach (Klasse klasse in ibz.Klassen)
             {
                 Console.WriteLine(klasse.Klassenbezeichnung);
                 Console.WriteLine("------");
-                foreach (var person in klasse)
+                foreach (Person person in klasse.Personen)
                 {
                     Console.WriteLine(person.Name + " " + person.Vorname);
+                    if (person is Student)
+                    {
+                        Student s = (Student)person;
+                        Console.WriteLine("Notendurchschnitt: ");
+                        s.GetNotenDurchSchnitt();
+                    }
+                    Console.WriteLine();
                 }
                 Console.WriteLine("------");
             }
-
-
-            Console.WriteLine(andreas.Name + " " + andreas.Vorname);
-            Console.WriteLine(andreas.GetNotenDurchSchnitt().ToString());
-            Console.WriteLine(max.Name + " " + max.Vorname);
-            Console.WriteLine(max.GetNotenDurchSchnitt().ToString());
             Console.ReadKey();
         }
     }

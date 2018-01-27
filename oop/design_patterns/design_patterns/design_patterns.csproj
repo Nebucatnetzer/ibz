@@ -45,6 +45,9 @@
     <Compile Include="Mediator\Client.cs" />
     <Compile Include="Mediator\DevTeam.cs" />
     <Compile Include="Mediator\Mediator.cs" />
+    <Compile Include="Observer\Abonennt.cs" />
+    <Compile Include="Observer\Observer.cs" />
+    <Compile Include="Observer\Verlag.cs" />
     <Compile Include="Proxy\Driver.cs" />
     <Compile Include="Singleton\EagerSingleton.cs" />
     <Compile Include="Proxy\ICar.cs" />
