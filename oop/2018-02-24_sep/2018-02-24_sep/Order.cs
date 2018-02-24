@@ -14,10 +14,12 @@ namespace _2018_02_24_sep
         public int order_id { get; set; }
         public DateTime date { get; }
 
-        public Order()
+        public Order(Hotel hotel, Customer customer)
         {
             this.rooms = new List<Room>();
             this.date = DateTime.Now;
+            this.hotel = hotel;
+            this.customer = customer;
         }
 
         public decimal price(Boolean mwst)

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace _2018_02_24_sep
 {
-    class Hotel
+    class City
     {
-        public string name { get; set; }
-        public List<Room> rooms { get; set; }
+        public string name { get; }
+        public int zip_code { get; }
 
-        public Hotel(string name)
+        public City(string name, int zip_code)
         {
-            this.rooms = new List<Room>();
             this.name = name;
+            this.zip_code = zip_code;
         }
     }
 }
