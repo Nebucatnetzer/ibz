@@ -8,9 +8,34 @@ namespace _2018_03_02_hausbesitzer
 {
     class Request
     {
-        private int id { get; set; }
-        private Status status { get; set; }
-        private enum Status {
+        private Status _status = Status.undefined;
+
+        public Status status
+        {
+            get { return _status; }
+        }
+
+
+        // propfull
+        private int _id;
+
+        public int id 
+        {
+            get { return _id; }
+            set
+            {
+                if (value > 0)
+                {
+                    _id = value;
+                }
+                else
+                {
+                    new Exception("ID can't be lower than 0");
+                }
+            }
+        }
+
+        public enum Status {
             undefined,
             first_data_delivered,
             first_data_checked,
@@ -22,43 +47,40 @@ namespace _2018_03_02_hausbesitzer
         public Request(int _id)
         {
             this.id = _id;
-            this.status = Status.undefined;
         }
 
         public void Check()
         {
            
-           switch (this.status)
+           switch (this._status)
             {
                 case Status.undefined:
-                    Console.WriteLine("Status " + this.status + " wurde gesetzt.");
-                    this.status = Status.first_data_delivered;
+                    this._status = Status.first_data_delivered;
+                    Console.WriteLine("Status " + this._status + " wurde gesetzt.");
                     break;
 
                 case Status.first_data_delivered:
-                    this.status = Status.first_data_checked;
-                    Console.WriteLine("Status " + this.status + " wurde gesetzt.");
+                    this._status = Status.first_data_checked;
+                    Console.WriteLine("Status " + this._status + " wurde gesetzt.");
                     break;
 
                 case Status.first_data_checked:
-                    this.status = Status.detail_data_delivered;
-                    Console.WriteLine("Status " + this.status + " wurde gesetzt.");
+                    this._status = Status.detail_data_delivered;
+                    Console.WriteLine("Status " + this._status + " wurde gesetzt.");
                     break;
 
                 case Status.detail_data_delivered:
-                    this.status = Status.final_data_delivered;
-                    Console.WriteLine("Status " + this.status + " wurde gesetzt.");
+                    this._status = Status.final_data_delivered;
+                    Console.WriteLine("Status " + this._status + " wurde gesetzt.");
                     break;
             }
         }
 
-        private void AllocateSubsidies() { 
-            if (this.status == Status.final_data_delivered)
+        public void AllocateSubsidies() { 
+            if (this._status == Status.final_data_delivered)
             {
-                this.status = Status.subsidies_delivered;
-                Console.WriteLine("Subvention von 300 CHF wird augezahlt.");
-            }
-
+                this._status = Status.subsidies_delivered;
+                Console.WriteLine("Subvention von 300 CHF wird augezahlt."); }
         }
     }
 }
