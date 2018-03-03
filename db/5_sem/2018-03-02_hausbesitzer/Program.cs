@@ -1,30 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Db4objects.Db4o;
+﻿using Db4objects.Db4o;
+using System;
+using System.IO;
 
 namespace _2018_03_02_hausbesitzer
 {
     class Program
     {
-        static string tempPath = System.IO.Path.GetTempPath();
-        readonly static string DbPath = System.IO.Path.Combine(
-                       tempPath,
-                       "hausbesitzer.db");
+        readonly static string YapFileName = Path.Combine(
+                               Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                               "formula1.yap");
 
         static void Main(string[] args)
         {
-            System.IO.File.Delete(DbPath);
-            IObjectContainer db = Db4oEmbedded.OpenFile(Db4oEmbedded.NewConfiguration(), DbPath);
-            HouseOwner owner = new HouseOwner("Max Muster", "Unterstrasse 14");
+            File.Delete(YapFileName);
+            IObjectContainer db = Db4oEmbedded.OpenFile(Db4oEmbedded.NewConfiguration(), YapFileName);
+            HouseOwner owner = new HouseOwner("max muster", "test");
             Request request = new Request(1);
             owner.requests.Add(request);
             db.Store(owner);
             db.Store(request);
-
-            if (request.status != Request.Status.final_data_delivered)
+            while (request.status != Request.Status.final_data_delivered)
             {
                 IObjectSet result = db.QueryByExample(request);
                 request = (Request)result.Next();
@@ -36,7 +31,8 @@ namespace _2018_03_02_hausbesitzer
             request.AllocateSubsidies();
             db.Store(request);
             db.Close();
-            Console.ReadLine();
+            Console.ReadKey();
         }
+
     }
 }

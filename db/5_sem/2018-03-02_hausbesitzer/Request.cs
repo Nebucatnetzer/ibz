@@ -8,17 +8,23 @@ namespace _2018_03_02_hausbesitzer
 {
     class Request
     {
-        private Status _status = Status.undefined;
+        public enum Status {
+            undefined,
+            first_data_delivered,
+            first_data_checked,
+            detail_data_delivered,
+            subsidies_delivered,
+            final_data_delivered
+        }
 
+        private Status _status = Status.undefined;
         public Status status
         {
             get { return _status; }
         }
 
-
         // propfull
         private int _id;
-
         public int id 
         {
             get { return _id; }
@@ -34,19 +40,9 @@ namespace _2018_03_02_hausbesitzer
                 }
             }
         }
-
-        public enum Status {
-            undefined,
-            first_data_delivered,
-            first_data_checked,
-            detail_data_delivered,
-            subsidies_delivered,
-            final_data_delivered
-        }
-
-        public Request(int _id)
+        public Request(int id)
         {
-            this.id = _id;
+            this.id = id;
         }
 
         public void Check()
