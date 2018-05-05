@@ -1,20 +1,19 @@
 ﻿using Db4objects.Db4o;
 using System;
-using System.IO;
 
 namespace _2018_03_02_hausbesitzer
 {
     class Program
     {
-        readonly static string YapFileName = Path.Combine(
+        readonly static string YapFileName = System.IO.Path.Combine(
                                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                                "formula1.yap");
 
         static void Main(string[] args)
         {
-            File.Delete(YapFileName);
+            System.IO.File.Delete(YapFileName);
             IObjectContainer db = Db4oEmbedded.OpenFile(Db4oEmbedded.NewConfiguration(), YapFileName);
-            HouseOwner owner = new HouseOwner("max muster", "test");
+            HouseOwner owner = new HouseOwner("max muster", "Unterstrasse 14");
             Request request = new Request(1);
             owner.requests.Add(request);
             db.Store(owner);

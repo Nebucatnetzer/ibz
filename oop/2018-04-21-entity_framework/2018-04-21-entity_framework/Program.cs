@@ -11,30 +11,30 @@ namespace _2018_04_21_entity_framework
     {
         static void Main(string[] args)
         {
-            using (ProductsEntities ctx = new ProductsEntities())
-            {
-                foreach (Category c in ctx.Categories)
-                {
-                    Console.WriteLine("---- " + c.CategoryName + " ----");
-                    foreach (Product p in c.Products)
-                    {
-                        Console.WriteLine(p.ProductName);
-                    }
-                }
-                
+            ProductDB dataaccess = new ProductDB();
 
-//                Category category = new Category();
-//                category.CategoryName = "Neue Kategory";
-//
-//                Product product = new Product();
-//                product.ProductName = "Neues Produkt";
-//                product.Category = category;
-//                product.Description = "Ein neues Produkt";
-//
-//                ctx.Products.Add(product);
-//
-//                ctx.SaveChanges();
+            List<Product> products = dataaccess.GetAllProducts();
+            foreach (var product in products)
+            {
+                Console.WriteLine(product.ProductName);
             }
+
+            Product evilPad = dataaccess.GetProductById(7);
+            if (evilPad != null)
+            {
+                Console.WriteLine(evilPad.ProductName);
+            }
+            dataaccess.DeleteProduct(evilPad);
+
+            Product ipad = new Product();
+            ipad.ProductName = "iPad Pro";
+            ipad.CategoryID = 1;
+            ipad.Description = "Simply and iPad nothing special";
+            dataaccess.CreateProduct(ipad);
+
+            ProductsEntities ctx = new ProductsEntities();
+            Product numberEight = ctx.GetNumberEight().Single();
+            Console.WriteLine(numberEight.Description);
             Console.ReadKey();
         }
     }
