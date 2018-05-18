@@ -8,7 +8,7 @@ namespace _2018_05_05_service_client
         static void Main(string[] args)
         {
             FirstServiceClient something = new FirstServiceClient();
-            string newstring = something.HelloWorld();
+            string newstring = something.;
         }
     }
 }

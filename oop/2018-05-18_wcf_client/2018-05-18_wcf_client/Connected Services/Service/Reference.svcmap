@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c3649ad8-82b5-4c87-9d1d-50ae1ab5ef2e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50399/FirstService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="FirstService.xsd" MetadataType="Schema" ID="6d771247-bb24-42d3-9160-0f3545b682c1" SourceId="1" SourceUrl="http://localhost:50399/FirstService.svc?xsd=xsd0" />
+    <MetadataFile FileName="FirstService1.xsd" MetadataType="Schema" ID="46bcd076-8d5c-4b3f-8f04-b7489c87036e" SourceId="1" SourceUrl="http://localhost:50399/FirstService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FirstService.disco" MetadataType="Disco" ID="14635249-e26c-41bc-bc30-88206bf3ae85" SourceId="1" SourceUrl="http://localhost:50399/FirstService.svc?disco" />
+    <MetadataFile FileName="FirstService.wsdl" MetadataType="Wsdl" ID="c2694af0-0757-49bd-91c4-2ed778b4b87f" SourceId="1" SourceUrl="http://localhost:50399/FirstService.svc?wsdl" />
+    <MetadataFile FileName="FirstService2.xsd" MetadataType="Schema" ID="a1c0f52e-4d1a-4a98-8ada-7d9e7e2e7c02" SourceId="1" SourceUrl="http://localhost:50399/FirstService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

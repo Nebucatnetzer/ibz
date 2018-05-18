@@ -13,6 +13,5 @@ namespace _2018_05_05_services
     {
         [OperationContract]
         string HelloWorld();
-        [DataContract]
     }
 }
