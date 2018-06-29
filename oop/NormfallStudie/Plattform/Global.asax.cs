@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace NormfallStudie
+namespace Plattform
 {
     public class Global : System.Web.HttpApplication
     {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cd3cb8c6-533c-4601-a65f-5c41ca9891d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49949/AirlineService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AirlineService.disco" MetadataType="Disco" ID="841f698c-3108-4fa0-8a92-2a9cd455274b" SourceId="1" SourceUrl="http://localhost:49949/AirlineService.svc?disco" />
+    <MetadataFile FileName="AirlineService.xsd" MetadataType="Schema" ID="f70b1b37-7ceb-44ff-910b-59fb273e19ec" SourceId="1" SourceUrl="http://localhost:49949/AirlineService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AirlineService.wsdl" MetadataType="Wsdl" ID="03c510b6-8ebf-42e5-b68d-797b06afec9d" SourceId="1" SourceUrl="http://localhost:49949/AirlineService.svc?wsdl" />
+    <MetadataFile FileName="AirlineService1.xsd" MetadataType="Schema" ID="f258b85d-efd7-49e8-a17b-2dff8b0d4145" SourceId="1" SourceUrl="http://localhost:49949/AirlineService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AirlineService2.xsd" MetadataType="Schema" ID="053ce53c-a1b2-45bd-a2ec-5d7d1e62125a" SourceId="1" SourceUrl="http://localhost:49949/AirlineService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

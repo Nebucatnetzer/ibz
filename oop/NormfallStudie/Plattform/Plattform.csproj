@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NormfallStudie</RootNamespace>
-    <AssemblyName>NormfallStudie</AssemblyName>
+    <RootNamespace>Plattform</RootNamespace>
+    <AssemblyName>Plattform</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -69,6 +75,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AirlineService\AirlineService.wsdl" />
+    <None Include="Connected Services\AirlineService\AirlineService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AirlineService\AirlineService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\AirlineService\AirlineService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\AirlineService\Plattform.AirlineService.Flight.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,15 +97,52 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\AirlineService\AirlineService.disco" />
+    <None Include="Connected Services\AirlineService\configuration91.svcinfo" />
+    <None Include="Connected Services\AirlineService\configuration.svcinfo" />
+    <None Include="Connected Services\AirlineService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Global.asax" />
+    <Content Include="home.aspx" />
     <Content Include="PlattformService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\AirlineService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DB\AvailabiltyDB.cs" />
+    <Compile Include="DB\AirlineDB.cs" />
+    <Compile Include="DB\HotelDB.cs" />
+    <Compile Include="DB\RoomDB.cs" />
+    <Compile Include="DB\RoomTypeDB.cs" />
+    <Compile Include="DB\FlightDB.cs" />
+    <Compile Include="DB\CityDB.cs" />
+    <Compile Include="DB\Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\EntitiesContextInitializer.cs" />
+    <Compile Include="Helper\GenerateData.cs" />
+    <Compile Include="Helper\MappingExtensions.cs" />
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="IPlattformService.cs" />
+    <Compile Include="Models\Availability.cs" />
+    <Compile Include="Models\City.cs" />
+    <Compile Include="Models\Hotel.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomAvailability.cs" />
+    <Compile Include="Models\RoomType.cs" />
     <Compile Include="PlattformService.svc.cs">
       <DependentUpon>PlattformService.svc</DependentUpon>
     </Compile>
@@ -94,7 +150,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\AirlineService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -111,7 +172,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>49742</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49742/</IISUrl>
+          <IISUrl>http://localhost:8000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
