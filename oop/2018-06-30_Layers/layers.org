@@ -29,3 +29,9 @@
 14. Im Business Layer interface implementieren
 15. DataAccess Klasse im Konstruktor erstellen
 16. im UI den Buisness Layer implementieren
+17. Add new Item zum DataLayer
+    - ADO.NET Entity Data Model DBModel
+18. Im Common Layer einen DbContext Generator hinzufügen
+19. Pfad zum DataLayer .edmx file anpassen
+20. Alle .tt Files im Datalayer .edmx loeschen da es sonst Kollisionen
+    mit Common gibt.
