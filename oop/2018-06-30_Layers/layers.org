@@ -1,0 +1,31 @@
+1. Blank solution
+2. Add new project
+    2.1 Class Library .net framework (DL)
+    2.2 Class Library .net framework (BL)
+    2.3 Class Library .net framework (CL)
+    2.4 Console App (UI)
+3. Klassen Files löschen
+4. Add Reference
+    4.1 UI -> BL und CL
+    4.2 BL -> DL und CL
+    4.3 DL -> CL
+5. 2 Folder erstellen im Common Layer
+   - Classes
+   - Interfaces
+6. Klasse erstellen im Common Layer
+   - int ID
+   - string Name
+7. Interface erstellen
+   - IPerson
+   - Person GetSinglePerson(int id)
+8. Folder erstellen im Data und Business Layer
+9. Klasse im DataLayer erstellen
+   - PersonDB
+10. Klasse im Business Layer erstellen
+    - PersonDL
+11. using für Common Layer einfügen
+12. Im DataLayer Interface implementieren
+13. Im DatalLayer person hardcoden
+14. Im Business Layer interface implementieren
+15. DataAccess Klasse im Konstruktor erstellen
+16. im UI den Buisness Layer implementieren
