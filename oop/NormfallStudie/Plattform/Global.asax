@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="NormfallStudie.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Plattform.Global" Language="C#" %>
