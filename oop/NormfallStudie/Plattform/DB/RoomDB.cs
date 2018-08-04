@@ -25,8 +25,9 @@ namespace Plattform.DB
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                System.Diagnostics.Trace.WriteLine(e);
                 return false;
             }
         }
@@ -43,8 +44,9 @@ namespace Plattform.DB
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                System.Diagnostics.Trace.WriteLine(e);
                 return false;
             }
 
@@ -61,8 +63,9 @@ namespace Plattform.DB
                 }
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                System.Diagnostics.Trace.WriteLine(e);
                 return false;
             }
         }
