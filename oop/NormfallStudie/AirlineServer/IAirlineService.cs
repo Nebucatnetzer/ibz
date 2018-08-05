@@ -13,6 +13,6 @@ namespace AirlineServer
     public interface IAirlineService
     {
         [OperationContract]
-        List<Flight> GetFreeFlights();
+        ICollection<Flight> GetFreeFlights();
     }
 }

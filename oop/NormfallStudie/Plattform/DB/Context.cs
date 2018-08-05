@@ -29,11 +29,34 @@ namespace Plattform.DB
                 .IsRequired()
                 .IsUnique();
 
-            modelBuilder.Entity<Room>()
-                .HasMany<RoomAvailability>(r => r.RoomAvailability)
-                .WithRequired()
-                .HasForeignKey(r => r.FoodPlaceID);
+            modelBuilder.Entity<Airline>()
+                .Property(a => a.AirlineID)
+                .IsRequired()
+                .IsUnique();
 
+            modelBuilder.Entity<Airline>()
+                .Property(a => a.Name)
+                .IsRequired();
+
+            modelBuilder.Entity<Flight>()
+                .Property(f => f.Name)
+                .IsRequired();
+
+            modelBuilder.Entity<Flight>()
+                .Property(f => f.Duration)
+                .IsRequired();
+
+            modelBuilder.Entity<Flight>()
+                .Property(f => f.FromCityShortName)
+                .IsRequired();
+
+            modelBuilder.Entity<Flight>()
+                .Property(f => f.StartTime)
+                .IsRequired();
+
+            modelBuilder.Entity<Flight>()
+                .Property(f => f.ToCityShortName)
+                .IsRequired();
         }
     }
 }

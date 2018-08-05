@@ -12,11 +12,11 @@ namespace AirlineServer
     // NOTE: In order to launch WCF Test Client for testing this service, please select AirlineService.svc or AirlineService.svc.cs at the Solution Explorer and start debugging.
     public class AirlineService : IAirlineService
     {
-        public List<Flight> GetFreeFlights()
+        public ICollection<Flight> GetFreeFlights()
         {
             List<Flight> free_flights = new List<Flight>();
-            Airline lufthansa = new Airline { name = "Lufthansa" };
-            Airline easyjet = new Airline { name = "Easyjet" };
+            Airline lufthansa = new Airline { Name = "Lufthansa" };
+            Airline easyjet = new Airline { Name = "Easyjet" };
             DateTime lufthansa_startdate = new DateTime(2018, 06, 15, 12, 00, 00, 00);
             DateTime easyjet_startdate = new DateTime(2018, 06, 11, 16, 00, 00, 00);
 

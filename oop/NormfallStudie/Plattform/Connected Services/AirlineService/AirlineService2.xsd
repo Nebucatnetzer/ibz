@@ -10,8 +10,8 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Airline" nillable="true" type="tns:Airline" />
       <xs:element minOccurs="0" name="Duration" type="xs:float" />
+      <xs:element minOccurs="0" name="FlightID" type="xs:int" />
       <xs:element minOccurs="0" name="FromCityShortName" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
       <xs:element minOccurs="0" name="ToCityShortName" nillable="true" type="xs:string" />
@@ -20,8 +20,8 @@
   <xs:element name="Flight" nillable="true" type="tns:Flight" />
   <xs:complexType name="Airline">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AirlineID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Airline" nillable="true" type="tns:Airline" />

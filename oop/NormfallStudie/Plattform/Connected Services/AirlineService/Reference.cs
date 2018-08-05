@@ -29,10 +29,10 @@ namespace Plattform.AirlineService {
         private float DurationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string FromCityShortNameField;
+        private int FlightIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
+        private string FromCityShortNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
@@ -80,6 +80,19 @@ namespace Plattform.AirlineService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public int FlightID {
+            get {
+                return this.FlightIDField;
+            }
+            set {
+                if ((this.FlightIDField.Equals(value) != true)) {
+                    this.FlightIDField = value;
+                    this.RaisePropertyChanged("FlightID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string FromCityShortName {
             get {
                 return this.FromCityShortNameField;
@@ -88,19 +101,6 @@ namespace Plattform.AirlineService {
                 if ((object.ReferenceEquals(this.FromCityShortNameField, value) != true)) {
                     this.FromCityShortNameField = value;
                     this.RaisePropertyChanged("FromCityShortName");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
-            get {
-                return this.IDField;
-            }
-            set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
                 }
             }
         }
@@ -164,10 +164,10 @@ namespace Plattform.AirlineService {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IDField;
+        private int AirlineIDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string nameField;
+        private string NameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -180,27 +180,27 @@ namespace Plattform.AirlineService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int ID {
+        public int AirlineID {
             get {
-                return this.IDField;
+                return this.AirlineIDField;
             }
             set {
-                if ((this.IDField.Equals(value) != true)) {
-                    this.IDField = value;
-                    this.RaisePropertyChanged("ID");
+                if ((this.AirlineIDField.Equals(value) != true)) {
+                    this.AirlineIDField = value;
+                    this.RaisePropertyChanged("AirlineID");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string name {
+        public string Name {
             get {
-                return this.nameField;
+                return this.NameField;
             }
             set {
-                if ((object.ReferenceEquals(this.nameField, value) != true)) {
-                    this.nameField = value;
-                    this.RaisePropertyChanged("name");
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }

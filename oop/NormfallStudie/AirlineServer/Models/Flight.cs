@@ -10,7 +10,7 @@ namespace AirlineServer.Models
     public class Flight
     {
         [DataMember]
-        public int ID { get; set; }
+        public int FlightID { get; set; }
         [DataMember]
         public Airline Airline { get; set; }
         [DataMember]

@@ -15,13 +15,13 @@ namespace Plattform.DB
                 return ctx.Flights.ToList();
             }
         }
-        public bool CreateFlight(Flight city)
+        public bool CreateFlight(Flight flight)
         {
             try
             {
                 using (Context ctx = new Context())
                 {
-                    ctx.Flights.Add(city);
+                    ctx.Flights.Add(flight);
                     ctx.SaveChanges();
                 }
                 return true;
@@ -52,14 +52,14 @@ namespace Plattform.DB
             }
 
         }
-        public bool DeleteFlight(Flight city)
+        public bool DeleteFlight(Flight flight)
         {
             try
             {
                 using (Context ctx = new Context())
                 {
-                    ctx.Flights.Attach(city);
-                    ctx.Flights.Remove(city);
+                    ctx.Flights.Attach(flight);
+                    ctx.Flights.Remove(flight);
                     ctx.SaveChanges();
                 }
                 return true;
