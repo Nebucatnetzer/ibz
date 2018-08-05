@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Plattform.Models;
-using Plattform.AirlineService;
 
 namespace Plattform.DB
 {

@@ -6,13 +6,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Plattform.Models;
 using Plattform.DB;
-using Plattform.AirlineService;
+using Plattform;
 
 namespace Plattform
 {
     public partial class home : System.Web.UI.Page
     {
-        public AirlineServiceClient service = new AirlineServiceClient();
+        public Plattform.AirlineService.AirlineServiceClient service = new Plattform.AirlineService.AirlineServiceClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -27,7 +27,7 @@ namespace Plattform
             var flights = this.service.GetFreeFlights();
             foreach (var item in flights)
             {
-                dataccess.CreateFlight(item);
+                dataccess.CreateFlight(new Flight(item));
             }
         }
 

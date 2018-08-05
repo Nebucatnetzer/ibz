@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using Plattform.Models;
 using Plattform.Helper;
-using Plattform.AirlineService;
 
 namespace Plattform.DB
 {
