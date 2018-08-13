@@ -13,5 +13,12 @@ namespace Plattform.Models
         public int ZipCode { get; set; }
         [DataMember]
         public string ShortName { get; set; }
+        public City() { }
+        public City(string name, int zipCode, string shortName)
+        {
+            this.Name = name;
+            this.ZipCode = zipCode;
+            this.ShortName = shortName;
+        }
     }
 }

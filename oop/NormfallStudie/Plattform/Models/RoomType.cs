@@ -9,5 +9,10 @@ namespace Plattform.Models
         public int RoomTypeID { get; set; }
         [DataMember]
         public string Name { get; set; }
+        public RoomType() { }
+        public RoomType(string name)
+        {
+            this.Name = name;
+        }
     }
 }

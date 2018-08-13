@@ -7,14 +7,18 @@ namespace Plattform.Helper
     {
         protected override void Seed(Context context)
         {
-            var cities = GenerateData.CreateCities();
+            //var cities = GenerateData.CreateCities();
+            var types = GenerateData.CreateRoomTypes();
 
-            foreach (var c in cities)
+            //foreach (var c in cities)
+            //{
+            //    context.Cities.Add(c);
+            //}
+            foreach (var t in types)
             {
-                context.Cities.Add(c);
+                context.RoomTypes.Add(t);
             }
             context.SaveChanges();
-
         }
     }
 }

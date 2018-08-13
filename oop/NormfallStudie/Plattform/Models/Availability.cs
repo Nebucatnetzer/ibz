@@ -13,6 +13,10 @@ namespace Plattform.Models
         public DateTime From { get; set; }
         [DataMember]
         public DateTime To { get; set; }
+        [DataMember]
+        bool Reserved { get; set; }
+        [DataMember]
+        bool Booked { get; set; }
         public ICollection<Room> Rooms { get; set; }
     }
 }
