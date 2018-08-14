@@ -91,6 +91,8 @@
     </Compile>
     <Compile Include="IAirlineService.cs" />
     <Compile Include="Models\Airline.cs" />
+    <Compile Include="Models\Airport.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Flight.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

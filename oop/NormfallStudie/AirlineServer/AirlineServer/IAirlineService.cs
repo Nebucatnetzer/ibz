@@ -13,6 +13,9 @@ namespace AirlineServer
     public interface IAirlineService
     {
         [OperationContract]
-        ICollection<Flight> GetFreeFlights();
+        ICollection<Flight> GetFreeFlights(DateTime startTime, DateTime endTime, string cityname, int numberOfSeats);
+        [OperationContract]
+        Flight BookFlight(Flight flight, int numberOfSeats);
+        Flight CancelFlight(Flight flight, int numberOfSeats);
     }
 }
