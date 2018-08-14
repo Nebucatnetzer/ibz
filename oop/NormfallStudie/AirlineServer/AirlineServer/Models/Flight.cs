@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Linq;
-using System.Web;
 
 namespace AirlineServer.Models
 {
@@ -20,8 +17,10 @@ namespace AirlineServer.Models
         [DataMember]
         public float Duration { get; set; }
         [DataMember]
-        public string FromCityShortName { get; set; }
+        public Airport FromAirport { get; set; }
         [DataMember]
-        public string ToCityShortName { get; set; }
+        public Airport ToAirport { get; set; }
+        public int MaxSeats { get; set; }
+        public int BookedSeats { get; set; }
     }
 }
