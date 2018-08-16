@@ -8,63 +8,61 @@ namespace AirlineServer.Helper
 {
     public static class FindFlight
     {
-        public static ICollection<ICollection<Flight>> Search(ICollection<Flight> flights,
+        public static ICollection<IEnumerable<Flight>> Search(
+                                                    ICollection<Flight> flights,
                                                     DateTime startTime,
                                                     DateTime endTime,
-                                                    string cityName)
+                                                    string destination,
+                                                    string origin,
+                                                    int numberOfSeats)
         {
-            ICollection<ICollection<Flight>> free_flights =
-               new List<ICollection<Flight>>();
+            ICollection<IEnumerable<Flight>> free_flights =
+               new List<IEnumerable<Flight>>();
 
-            var flightsWithSeats = FindFlight.FlightsWithSeats(flights);
-            var flightsTo = FindFlight.FlightsTo(flightsWithSeats,
-                                                 cityName, startTime);
-            var flightsFrom = FindFlight.FlightsFrom(flightsWithSeats,
-                                                     cityName, endTime);
+            var flightsWithSeats = FindFlight
+               .FlightsWithSeats(flights, numberOfSeats);
+            var flightsTo= FindFlight
+               .FlightsTo(flightsWithSeats, destination, origin, startTime);
+            var flightsBack = FindFlight
+               .FlightsBack(flightsWithSeats, destination, origin, endTime);
+
             free_flights.Add(flightsTo);
-            free_flights.Add(flightsFrom);
+            free_flights.Add(flightsBack);
             return free_flights;
         }
-        public static ICollection<Flight> FlightsWithSeats(ICollection<Flight> raw_flights)
+        public static IEnumerable <Flight> FlightsWithSeats(
+           ICollection<Flight> raw_flights,
+           int numberOfSeats)
         {
-            ICollection<Flight> flights = new List<Flight>();
-            foreach (var flight in raw_flights)
-            {
-                if (flight.MaxSeats > flight.BookedSeats)
-                {
-                    flights.Add(flight);
-                }
-            }
+            IEnumerable<Flight> flights = new List<Flight>();
+            flights = raw_flights.Where(f => (f.MaxSeats - f.BookedSeats)
+                                        > numberOfSeats);
             return flights;
         }
-        public static ICollection<Flight> FlightsTo(ICollection<Flight> raw_flights,
-                                                    string cityName,
+        public static IEnumerable <Flight> FlightsTo(IEnumerable<Flight> raw_flights,
+                                                    string destination,
+                                                    string origin,
                                                     DateTime startTime)
         {
-            ICollection<Flight> flights = new List<Flight>();
-            foreach (var flight in raw_flights)
-            {
-                if (flight.ToAirport.City.Name == cityName
-                    && flight.StartTime == startTime)
-                {
-                    flights.Add(flight);
-                }
-            }
+            IEnumerable<Flight> flights = new List<Flight>();
+            flights = raw_flights.Where(f =>
+                                        f.Destination.City.Name == destination
+                                        & f.Origin.City.Name == origin
+                                        & f.StartTime == startTime);
             return flights;
         }
-        public static ICollection<Flight> FlightsFrom(ICollection<Flight> raw_flights,
-                                                    string cityName,
-                                                    DateTime endTime)
+        // Since this function searches for a flight back the arguments
+        // destination and origin get used in reverse.
+        public static IEnumerable<Flight> FlightsBack(IEnumerable<Flight> raw_flights,
+                                                      string destination,
+                                                      string origin,
+                                                      DateTime endTime)
         {
-            ICollection<Flight> flights = new List<Flight>();
-            foreach (var flight in raw_flights)
-            {
-                if (flight.ToAirport.City.Name == cityName
-                    && flight.StartTime == endTime)
-                {
-                    flights.Add(flight);
-                }
-            }
+            IEnumerable<Flight> flights = new List<Flight>();
+            flights = raw_flights.Where(f =>
+                                        f.Destination.City.Name == origin
+                                        & f.Origin.City.Name == destination
+                                        & f.StartTime == endTime);
             return flights;
         }
     }

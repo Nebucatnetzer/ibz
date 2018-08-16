@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+using System.Collections.Generic;
 using AirlineServer.Models;
 using AirlineServer.Helper;
 
@@ -16,20 +13,50 @@ namespace AirlineServer
     // Explorer and start debugging.
     public class AirlineService : IAirlineService
     {
-        public Flight BookFlight(Flight flight, int numberOfSeats)
+
+        public List<Flight> flights = new List<Flight>();
+
+        public Flight BookFlight(Flight flight,
+                                 int numberOfSeats)
         {
-            throw new NotImplementedException();
+           Flight flightToBook = this.flights.Single(f => f == flight);
+           if (flightToBook != null)
+           {
+              flightToBook.BookedSeats += numberOfSeats;
+              return flightToBook;
+           }
+           else
+           {
+              return flight;
+           }
         }
         public Flight CancelFlight(Flight flight, int numberOfSeats)
         {
-            throw new NotImplementedException();
+           Flight flightToBook = this.flights.Single(f => f == flight);
+           if (flightToBook != null)
+           {
+              flightToBook.BookedSeats -= numberOfSeats;
+              return flightToBook;
+           }
+           else
+           {
+              return flight;
+           }
         }
-        public ICollection<ICollection<Flight>> GetFlights(DateTime startTime,
-                                              DateTime endTime,
-                                              string cityName,
-                                              int numberOfSeats)
+        public ICollection<IEnumerable<Flight>> GetFlights(DateTime startTime,
+                                                           DateTime endTime,
+                                                           string origin,
+                                                           string destination,
+                                                           int numberOfSeats)
         {
-            ICollection<ICollection<Flight>> free_flights = new List<ICollection<Flight>>();
+            ICollection<IEnumerable<Flight>> freeFlights = new List<IEnumerable<Flight>>();
+            freeFlights = FindFlight.Search(this.flights, startTime,
+                                            endTime, origin,
+                                            destination, numberOfSeats);
+            return freeFlights;
+        }
+
+        public AirlineService(){
             List<Flight> flights = new List<Flight>();
 
             Airline lufthansa = new Airline { Name = "Lufthansa" };
@@ -51,31 +78,31 @@ namespace AirlineServer
             {
                 ShortName = "BSL",
                 Name = "Basel Airport",
-                City = zurich
+                City = basel
             };
 
             Airport agenf = new Airport
             {
                 ShortName = "GNF",
                 Name = "Geneva Airport",
-                City = zurich
+                City = genf
             };
 
             Airport abelp = new Airport
             {
                 ShortName = "BLP",
                 Name = "Belp Airport",
-                City = zurich
+                City = belp
             };
 
-            DateTime zurichStartDate = new DateTime(2018, 06, 15, 12, 00,
+            DateTime zurichStartDate = new DateTime(2018, 08, 15, 12, 00,
                                                         00, 00);
-            DateTime baselStartDate = new DateTime(2018, 06, 16, 16, 00,
-                                                      00, 00);
-            DateTime genfStartDate = new DateTime(2018, 06, 19, 16, 00,
-                                                      00, 00);
-            DateTime belpStartDate = new DateTime(2018, 06, 09, 16, 00,
-                                                      00, 00);
+            DateTime baselStartDate = new DateTime(2018, 08, 15, 12, 00,
+                                                    00, 00);
+            DateTime genfStartDate = new DateTime(2018, 08, 19, 12, 00,
+                                                    00, 00);
+            DateTime belpStartDate = new DateTime(2018, 08, 09, 12, 00,
+                                                    00, 00);
 
             Flight zurich_basel = new Flight
             {
@@ -83,19 +110,19 @@ namespace AirlineServer
                 Name = "LFH1206",
                 StartTime = zurichStartDate,
                 Duration = 2.50F,
-                FromAirport = azurich,
-                ToAirport = abasel,
+                Origin = azurich,
+                Destination = abasel,
                 MaxSeats = 10,
                 BookedSeats = 0
             };
-            Flight basel_belp = new Flight
+            Flight basel_zurich = new Flight
             {
                 Airline = easyjet,
                 Name = "ESZ666",
                 StartTime = baselStartDate,
                 Duration = 7.20F,
-                FromAirport = abasel,
-                ToAirport = abelp,
+                Origin = abasel,
+                Destination = azurich,
                 MaxSeats = 10,
                 BookedSeats = 0
             };
@@ -105,8 +132,8 @@ namespace AirlineServer
                 Name = "ESZ666",
                 StartTime = genfStartDate,
                 Duration = 7.20F,
-                FromAirport = agenf,
-                ToAirport = azurich,
+                Origin = agenf,
+                Destination = azurich,
                 MaxSeats = 10,
                 BookedSeats = 0
             };
@@ -116,17 +143,15 @@ namespace AirlineServer
                 Name = "ESZ666",
                 StartTime = belpStartDate,
                 Duration = 7.20F,
-                FromAirport = abelp,
-                ToAirport = azurich,
+                Origin = abelp,
+                Destination = azurich,
                 MaxSeats = 10,
                 BookedSeats = 0
             };
-            flights.Add(zurich_basel);
-            flights.Add(basel_belp);
-            flights.Add(genf_zurich);
-            flights.Add(belp_zurich);
-            FindFlight.Search(flights, startTime, endTime,
-                                                   cityName);
+            this.flights.Add(zurich_basel);
+            this.flights.Add(basel_zurich);
+            this.flights.Add(genf_zurich);
+            this.flights.Add(belp_zurich);
         }
     }
 }

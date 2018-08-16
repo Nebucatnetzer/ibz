@@ -15,8 +15,11 @@ namespace AirlineServer
     public interface IAirlineService
     {
         [OperationContract]
-        ICollection<ICollection<Flight>> GetFlights(DateTime startTime, DateTime endTime,
-                                           string cityName, int numberOfSeats);
+        ICollection<IEnumerable<Flight>> GetFlights(DateTime startTime,
+                                                    DateTime endTime,
+                                                    string origin,
+                                                    string destination,
+                                                    int numberOfSeats);
         [OperationContract]
         Flight BookFlight(Flight flight, int numberOfSeats);
         Flight CancelFlight(Flight flight, int numberOfSeats);

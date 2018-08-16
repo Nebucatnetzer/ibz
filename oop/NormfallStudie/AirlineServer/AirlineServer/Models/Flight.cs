@@ -17,9 +17,9 @@ namespace AirlineServer.Models
         [DataMember]
         public float Duration { get; set; }
         [DataMember]
-        public Airport FromAirport { get; set; }
+        public Airport Origin { get; set; }
         [DataMember]
-        public Airport ToAirport { get; set; }
+        public Airport Destination { get; set; }
         public int MaxSeats { get; set; }
         public int BookedSeats { get; set; }
     }
